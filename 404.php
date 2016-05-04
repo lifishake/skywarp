@@ -1,10 +1,10 @@
 <?php
 /**
- * The template for displaying 404 pages (not found)
+ * 用来表示404页
  *
  * @package WordPress
- * @subpackage Twenty_Sixteen
- * @since Twenty Sixteen 1.0
+ * @subpackage SkyWarp
+ * @since SkyWarp 1.0
  */
 
 get_header(); ?>
@@ -14,11 +14,11 @@ get_header(); ?>
 
 			<section class="error-404 not-found">
 				<header class="page-header">
-					<h1 class="page-title"><?php _e( 'Oops! That page can&rsquo;t be found.', 'twentysixteen' ); ?></h1>
+					<h1 class="page-title"><?php echo('出错了!') ; ?></h1>
 				</header><!-- .page-header -->
 
 				<div class="page-content">
-					<p><?php _e( 'It looks like nothing was found at this location. Maybe try a search?', 'twentysixteen' ); ?></p>
+					<p><?php echo('没找到内容。试试搜索吧！'); ?></p>
 
 					<?php get_search_form(); ?>
 				</div><!-- .page-content -->
