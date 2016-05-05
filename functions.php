@@ -25,13 +25,6 @@
  * @since Twenty Sixteen 1.0
  */
 
-/**
- * Twenty Sixteen only works in WordPress 4.4 or later.
- */
-if ( version_compare( $GLOBALS['wp_version'], '4.4-alpha', '<' ) ) {
-	require get_template_directory() . '/inc/back-compat.php';
-}
-
 if ( ! function_exists( 'twentysixteen_setup' ) ) :
 /**
  * Sets up theme defaults and registers support for various WordPress features.
@@ -301,13 +294,8 @@ function twentysixteen_body_classes( $classes ) {
 		$classes[] = 'custom-background-image';
 	}
 
-	// Adds a class of group-blog to sites with more than 1 published author.
-	if ( is_multi_author() ) {
-		$classes[] = 'group-blog';
-	}
-
 	// Adds a class of no-sidebar to sites without active sidebar.
-	if ( ! is_active_sidebar( 'sidebar-1' ) ) {
+	if ( 1 /*! is_active_sidebar( 'sidebar-1' )*/ ) {
 		$classes[] = 'no-sidebar';
 	}
 

@@ -32,22 +32,28 @@
 1. 如果不是以为GPL的要求，本人其实根本不想把这个主题公开。为了省事，所有的注释以及可配置的字符串都设成了中文UTF8编码。所有的歪果仁朋友，对不起了。    
 	Sorry for non-Chinese developers, the author had never supposed to support any foreign languages.     
 	非中国の開発者のため申し訳ありませんが、著者は、任意の外国語をサポートする予定はありませんでした。
-1. 	无限加载效果与lazyload有冲突。我解决了使用unveil-ui.min.js时的冲突，如果有其它实现方法的需要自行解决。
-2.  不支持文章内翻页（wp_link_pages（）），因为我觉得这是个没用的功能。
-3.  不支持原生的gallery风格（media.h）。
-4.	支持自定义标题字体。包括标题和副标题，上传字体文件到\fonts下，然后在主题选项中加入字体名字即可。自定义字体教程见：
-	[教程](http://pewae.com/2015/10/yonginkscapezhizuozidingyizitibingtianjiadaowordpresszhong.html)
-5.	支持首页和归档页面的无限滚动（可自定义）。搜索页面如需要同样效果，可自行参照修改。无限滚动效果使用Infinite scroll库。想修改loading图片，替换\images\loading.gif，想替换加载文字，替换\script.js中对应的内容。查找的参数利用的是关键字posts-navigation我利用了4.3以后的新函数the_posts_pagination（）与旧函数the_posts_navigation（）的区别，如果要修改请查阅the_posts_navigation（）的相关内容。
-6.  我的理念是主题不负责与显示无关的事。所以，gravatar问题、smile问题、自动版本保存问题、google字体问题、中文截断问题、图片延时加载问题统统不提供解决方案，请自行修改添加。
-7.  不支持多作者。作者名已隐藏。
-8.  归档页面保留类别、标签和日期，其余归档页面自动跳转到404。
-9.  请自行添加一个社会化导航menu，设置好之后右上角就可以显示。
-10. 自带lazyload功能，如果与安装的插件有冲突请自行调整。
+
 
 
 ----------
 
 # IV. 版本历史 #
+
+**2016/5/5 0.03**
+----------
+- archive页翻译
+- 在function和css里删除group-blog(多用户)
+- 删除footer里的proudly powered by一行
+- 删除back-compat，里面全是没用的最低版本支持的提示
+- 删除editor-style.css。这个文件的效果是为了让virtual编辑界面显示的时候“所见即所得”。没卵用。
+- 删除rtl.css。这个文件是给从右往左阅读的文字准备的。
+- search页翻译
+
+**2016/5/4 0.02**
+----------
+- 404页翻译完成
+- 删掉多余的font family
+
 
 **2016/5/4 0.01**
 ----------
