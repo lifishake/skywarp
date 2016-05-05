@@ -4,7 +4,7 @@ Theme URI: http:pewae.com
 Author: 大致
 Author URI: http:pewae.com
 Description: Skywrap基于wordpress官方主题修改。本主题追求简单快捷舒适，适用于中文用户。
-Version: 0.03
+Version: 0.04
 GitHub Theme URI: lifishake/skywarp
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -1690,9 +1690,6 @@ blockquote:after,
 
 .post-thumbnail img {
     display: block;
-}
-
-.no-sidebar .post-thumbnail img {
     margin: 0 auto;
 }
 
@@ -2356,9 +2353,49 @@ body.search-no-results .page-header {
 
 .sidebar {
     margin-bottom: 3.5em;
+    position: fixed;
+    width: 25em;
+    height: 100%;
     padding: 0 7.6923%;
+    top: 0;
+    right: -25em;
+    -webkit-transition: all 0.8s;
+    transition: all 0.8s;
+    overflow-y: auto;
+    z-index: 99;
+    background-color:rgba(0,0,0,0.9);
 }
 
+.sidebar-visible {
+    right: 0;
+}
+
+.sidebar-toggle{ position:fixed;
+           cursor:pointer;
+           z-index: 101;
+           background-color:rgba(0,0,0,0);
+           font-size:1.33em !important;
+           }
+
+.sidebar-toggle:hover{
+    -webkit-transition:all .8s ease-in-out;
+    -moz-transition:all .8s ease-in-out;
+    -o-transition:all .8s ease-in-out;
+    transition:all .8s ease-in-out;
+    -webkit-transform:rotate(360deg);
+    -moz-transform:rotate(360deg);
+    transform:rotate(360deg);
+    }
+    
+.sidebar-toggle {
+    right:4%;
+    bottom:20%;
+    bottom:    -moz-calc(10% + 48px);
+    bottom: -webkit-calc(10% + 48px);
+    bottom:         calc(10% + 48px);
+    -webkit-transition: all 0.8s;
+    transition: all 0.8s;
+}
 
 /**
  * 11.6 - Footer
@@ -2683,7 +2720,6 @@ p > video {
     width: device-width;
 }
 
-
 /**
  * 14.1 - >= 710px
  */
@@ -2888,7 +2924,6 @@ p > video {
         margin-bottom: 5.25em;
     }
 
-    .sidebar,
     .widecolumn {
         margin-bottom: 5.25em;
         padding-right: 23.0769%;
@@ -3070,9 +3105,9 @@ p > video {
     }
 
     .content-area {
-        float: left;
-        margin-right: -100%;
-        width: 70%;
+        float: none;
+        margin: 0;
+        width: 100%;
     }
 
     .entry-header,
@@ -3089,13 +3124,6 @@ p > video {
     .content-bottom-widgets {
         margin-right: 0;
         margin-left: 0;
-    }
-
-    .sidebar {
-        float: left;
-        margin-left: 75%;
-        padding: 0;
-        width: 25%;
     }
 
     .widget {
@@ -3321,23 +3349,17 @@ p > video {
         order: 1;
     }
 
-    .no-sidebar .content-area {
-        float: none;
-        margin: 0;
-        width: 100%;
-    }
-
-    .no-sidebar .entry-header,
-    .no-sidebar .entry-content,
-    .no-sidebar .entry-summary,
-    .no-sidebar .entry-footer,
-    .no-sidebar .comments-area,
-    .no-sidebar .image-navigation,
-    .no-sidebar .post-navigation,
-    .no-sidebar .pagination,
-    .no-sidebar .page-header,
-    .no-sidebar .page-content,
-    .no-sidebar .content-bottom-widgets {
+    .entry-header,
+    .entry-content,
+    .entry-summary,
+    .entry-footer,
+    .comments-area,
+    .image-navigation,
+    .post-navigation,
+    .pagination,
+    .page-header,
+    .page-content,
+    .content-bottom-widgets {
         margin-right: 15%;
         margin-left: 15%;
     }
@@ -3498,8 +3520,10 @@ p > video {
     }
 
     body:not(.search-results) article:not(.type-page) .entry-content {
-        float: right;
-        width: 71.42857144%;
+        float: left;
+        margin-right: -100%;
+        margin-left: 34.99999999%;
+        width: 50.00000001%;
     }
 
     body:not(.search-results) article:not(.type-page) .entry-content > blockquote.alignleft.below-entry-meta {
@@ -3526,9 +3550,9 @@ p > video {
     }
 
     body:not(.search-results) article:not(.type-page) .entry-footer {
-        float: left;
-        margin-top: 0.1538461538em;
-        width: 21.42857143%;
+        margin-right: -100%;
+        margin-left: 15%;
+        width: 15%;
     }
 
     body:not(.search-results) article:not(.type-page) .entry-footer > span:not(:last-child):after {
@@ -3558,18 +3582,7 @@ p > video {
         width: 49px;
     }
 
-    body.no-sidebar:not(.search-results) article:not(.type-page) .entry-content {
-        float: left;
-        margin-right: -100%;
-        margin-left: 34.99999999%;
-        width: 50.00000001%;
-    }
 
-    body.no-sidebar:not(.search-results) article:not(.type-page) .entry-footer {
-        margin-right: -100%;
-        margin-left: 15%;
-        width: 15%;
-    }
 }
 
 
@@ -3695,7 +3708,11 @@ p > video {
     }
 }
 
-
+@media screen and (max-width: 28.75em) {
+    .sidebar-visible {
+        width: 100%;
+    }
+}
 /**
  * 15.0 - Print
  */
@@ -3932,4 +3949,34 @@ p > video {
     .widecolumn {
         padding: 0;
     }
+}
+
+.fa {
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transform: translate(0, 0);
+}
+
+/*侧边栏菜单(汉堡符号)*/
+.fa-navicon:before,
+.fa-reorder:before,
+.fa-bars:before {
+  content: "\f0c9";
+}
+/*侧边栏菜单(关闭)*/
+.fa-remove:before,
+.fa-close:before,
+.fa-times:before {
+  content: "\f00d";
+}
+/*箭头s*/
+.fa-arrow-left:before {
+  content: "\f060";
+}
+.fa-arrow-right:before {
+  content: "\f061";
 }

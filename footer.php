@@ -52,7 +52,7 @@
 		</footer><!-- .site-footer -->
 	</div><!-- .site-inner -->
 </div><!-- .site -->
-
+<div class="sidebar-toggle"><i class="fa fa-arrow-left"></i></div>
 <?php wp_footer(); ?>
 </body>
 </html>

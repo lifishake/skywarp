@@ -179,7 +179,30 @@
 			}
 		} );
 	}
-
+    
+    //Toggle sidebar
+	$('.sidebar-toggle').click(function() {
+		$('.sidebar').toggleClass('sidebar-visible');
+        //$comm = jQuery('.floatcomment');
+        if ( $('.sidebar').hasClass('sidebar-visible') ) {
+            //jQuery('.floattop').css('display', 'none');
+            //jQuery('.floathome').css('display', 'none');
+            /*if ( $comm )
+                $comm.css('display', 'none');*/
+        }
+        else {
+            /*jQuery('.floattop').css('display', '');
+            jQuery('.floathome').css('display', '');
+            if ( $comm )
+                $comm.css('display', '');*/
+        }
+		//$('.sidebar-toggle').toggleClass('sidebar-toggled');
+		$('.sidebar-toggle').find('i').toggleClass('fa-arrow-left fa-arrow-right');
+	});
+	$('.sidebar-toggle-inside').click(function() {
+		$('.sidebar').toggleClass('sidebar-visible');
+	});
+    
 	$( document ).ready( function() {
 		body = $( document.body );
 
