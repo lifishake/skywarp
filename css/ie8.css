@@ -9,7 +9,6 @@ code {
 }
 
 .entry-content a,
-.entry-summary a,
 .taxonomy-description a,
 .logged-in-as a,
 .comment-content a,
@@ -22,8 +21,6 @@ code {
 
 .entry-content a:hover,
 .entry-content a:focus,
-.entry-summary a:hover,
-.entry-summary a:focus,
 .taxonomy-description a:hover,
 .taxonomy-description a:focus,
 .logged-in-as a:hover,
@@ -208,15 +205,3 @@ code {
 	display: none;
 }
 
-.rtl .site-branding {
-	float: right;
-}
-
-.rtl .menu-toggle {
-	float: left;
-}
-
-.rtl .comment-list .children > li {
-	padding-right: 1.75em;
-	padding-left: 0;
-}

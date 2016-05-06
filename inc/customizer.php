@@ -494,10 +494,7 @@ function twentysixteen_get_color_scheme_css( $colors ) {
 	.pagination .nav-links:after,
 	.widget_calendar tbody a,
 	.widget_calendar tbody a:hover,
-	.widget_calendar tbody a:focus,
-	.page-links a,
-	.page-links a:hover,
-	.page-links a:focus {
+	.widget_calendar tbody a:focus {
 		color: {$colors['page_background_color']};
 	}
 
@@ -548,9 +545,7 @@ function twentysixteen_get_color_scheme_css( $colors ) {
 	.pagination .prev:focus,
 	.pagination .next:hover,
 	.pagination .next:focus,
-	.widget_calendar tbody a,
-	.page-links a:hover,
-	.page-links a:focus {
+	.widget_calendar tbody a{
 		background-color: {$colors['link_color']};
 	}
 
@@ -581,7 +576,6 @@ function twentysixteen_get_color_scheme_css( $colors ) {
 	.widget-title a,
 	.site-branding .site-title a,
 	.entry-title a,
-	.page-links > .page-links-title,
 	.comment-author,
 	.comment-reply-title small a:hover,
 	.comment-reply-title small a:focus {
@@ -597,7 +591,6 @@ function twentysixteen_get_color_scheme_css( $colors ) {
 	.pagination,
 	.widget,
 	.page-header,
-	.page-links a,
 	.comments-title,
 	.comment-reply-title {
 		border-color: {$colors['main_text_color']};
@@ -621,8 +614,7 @@ function twentysixteen_get_color_scheme_css( $colors ) {
 	.pagination:before,
 	.pagination:after,
 	.pagination .prev,
-	.pagination .next,
-	.page-links a {
+	.pagination .next {
 		background-color: {$colors['main_text_color']};
 	}
 
@@ -632,9 +624,6 @@ function twentysixteen_get_color_scheme_css( $colors ) {
 	 * IE8 and earlier will drop any block with CSS3 selectors.
 	 * Do not combine these styles with the next block.
 	 */
-	body:not(.search-results) .entry-summary {
-		color: {$colors['secondary_text_color']};
-	}
 
 	blockquote,
 	.post-password-form label,
@@ -653,7 +642,6 @@ function twentysixteen_get_color_scheme_css( $colors ) {
 	.entry-footer a,
 	.sticky-post,
 	.taxonomy-description,
-	.entry-caption,
 	.comment-metadata,
 	.pingback .edit-link,
 	.comment-metadata a,
@@ -700,9 +688,6 @@ function twentysixteen_get_color_scheme_css( $colors ) {
 	.comment-navigation,
 	.tagcloud a,
 	.entry-content,
-	.entry-summary,
-	.page-links a,
-	.page-links > span,
 	.comment-list article,
 	.comment-list .pingback,
 	.comment-list .trackback,
@@ -824,10 +809,7 @@ function twentysixteen_page_background_color_css() {
 		.pagination .nav-links:after,
 		.widget_calendar tbody a,
 		.widget_calendar tbody a:hover,
-		.widget_calendar tbody a:focus,
-		.page-links a,
-		.page-links a:hover,
-		.page-links a:focus {
+		.widget_calendar tbody a:focus {
 			color: %1$s;
 		}
 
@@ -912,9 +894,7 @@ function twentysixteen_link_color_css() {
 		.pagination .prev:focus,
 		.pagination .next:hover,
 		.pagination .next:focus,
-		.widget_calendar tbody a,
-		.page-links a:hover,
-		.page-links a:focus {
+		.widget_calendar tbody a{
 			background-color: %1$s;
 		}
 
@@ -986,7 +966,6 @@ function twentysixteen_main_text_color_css() {
 		.widget-title a,
 		.site-branding .site-title a,
 		.entry-title a,
-		.page-links > .page-links-title,
 		.comment-author,
 		.comment-reply-title small a:hover,
 		.comment-reply-title small a:focus {
@@ -1002,7 +981,6 @@ function twentysixteen_main_text_color_css() {
 		.pagination,
 		.widget,
 		.page-header,
-		.page-links a,
 		.comments-title,
 		.comment-reply-title {
 			border-color: %1$s;
@@ -1026,8 +1004,7 @@ function twentysixteen_main_text_color_css() {
 		.pagination:before,
 		.pagination:after,
 		.pagination .prev,
-		.pagination .next,
-		.page-links a {
+		.pagination .next{
 			background-color: %1$s;
 		}
 
@@ -1054,9 +1031,6 @@ function twentysixteen_main_text_color_css() {
 		.comment-navigation,
 		.tagcloud a,
 		.entry-content,
-		.entry-summary,
-		.page-links a,
-		.page-links > span,
 		.comment-list article,
 		.comment-list .pingback,
 		.comment-list .trackback,
@@ -1114,9 +1088,6 @@ function twentysixteen_secondary_text_color_css() {
 		 * IE8 and earlier will drop any block with CSS3 selectors.
 		 * Do not combine these styles with the next block.
 		 */
-		body:not(.search-results) .entry-summary {
-			color: %1$s;
-		}
 
 		blockquote,
 		.post-password-form label,
@@ -1135,7 +1106,6 @@ function twentysixteen_secondary_text_color_css() {
 		.entry-footer a,
 		.sticky-post,
 		.taxonomy-description,
-		.entry-caption,
 		.comment-metadata,
 		.pingback .edit-link,
 		.comment-metadata a,

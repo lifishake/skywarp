@@ -32,12 +32,21 @@
 1. 如果不是以为GPL的要求，本人其实根本不想把这个主题公开。为了省事，所有的注释以及可配置的字符串都设成了中文UTF8编码。所有的歪果仁朋友，对不起了。    
 	Sorry for non-Chinese developers, the author had never supposed to support any foreign languages.     
 	非中国の開発者のため申し訳ありませんが、著者は、任意の外国語をサポートする予定はありませんでした。
-
+2. 不建议多用户使用本主题。因为本人删除了author相关的内容。
+3. 不支持wp_link_pages（）函数。有文章内部分页需求的人请勿使用本主题。
 
 
 ----------
 
 # IV. 版本历史 #
+
+## 2016/5/6 0.05 ##
+- 删除biography.php及css中相关内容
+- 删除wp_link_pages()及css中相关内容
+- 删除twentysixteen_excerpt_more及其注册
+- 删除twentysixteen_excerpt及css中相关内容
+- 删除content-search
+- 增加只在post中搜索结果的功能
 
 ## 2016/5/5 0.04 ##
 - sidebar变为抽屉效果

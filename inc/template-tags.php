@@ -143,51 +143,6 @@ function twentysixteen_post_thumbnail() {
 }
 endif;
 
-if ( ! function_exists( 'twentysixteen_excerpt' ) ) :
-	/**
-	 * Displays the optional excerpt.
-	 *
-	 * Wraps the excerpt in a div element.
-	 *
-	 * Create your own twentysixteen_excerpt() function to override in a child theme.
-	 *
-	 * @since Twenty Sixteen 1.0
-	 *
-	 * @param string $class Optional. Class string of the div element. Defaults to 'entry-summary'.
-	 */
-	function twentysixteen_excerpt( $class = 'entry-summary' ) {
-		$class = esc_attr( $class );
-
-		if ( has_excerpt() || is_search() ) : ?>
-			<div class="<?php echo $class; ?>">
-				<?php the_excerpt(); ?>
-			</div><!-- .<?php echo $class; ?> -->
-		<?php endif;
-	}
-endif;
-
-if ( ! function_exists( 'twentysixteen_excerpt_more' ) && ! is_admin() ) :
-/**
- * Replaces "[...]" (appended to automatically generated excerpts) with ... and
- * a 'Continue reading' link.
- *
- * Create your own twentysixteen_excerpt_more() function to override in a child theme.
- *
- * @since Twenty Sixteen 1.0
- *
- * @return string 'Continue reading' link prepended with an ellipsis.
- */
-function twentysixteen_excerpt_more() {
-	$link = sprintf( '<a href="%1$s" class="more-link">%2$s</a>',
-		esc_url( get_permalink( get_the_ID() ) ),
-		/* translators: %s: Name of current post */
-		sprintf( __( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'twentysixteen' ), get_the_title( get_the_ID() ) )
-	);
-	return ' &hellip; ' . $link;
-}
-add_filter( 'excerpt_more', 'twentysixteen_excerpt_more' );
-endif;
-
 /**
  * Determines whether blog/site has more than one category.
  *

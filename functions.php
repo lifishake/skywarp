@@ -407,3 +407,18 @@ function twentysixteen_widget_tag_cloud_args( $args ) {
 	return $args;
 }
 add_filter( 'widget_tag_cloud_args', 'twentysixteen_widget_tag_cloud_args' );
+
+/**
+ * 只在post中搜索结果
+ *
+ * @via http://www.wpbeginner.com/wp-tutorials/how-to-exclude-pages-from-wordpress-search-results/
+ * @param $query WP自带的搜索类
+ * @return 替换后的搜索类
+ */
+function skywarp_search_filter($query) {
+    if ($query->is_search) {
+        $query->set('post_type', 'post');
+    }
+    return $query;
+}
+add_filter('pre_get_posts','skywarp_search_filter');
