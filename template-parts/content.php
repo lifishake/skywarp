@@ -17,8 +17,6 @@
 		<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
 	</header><!-- .entry-header -->
 
-	<?php twentysixteen_post_thumbnail(); ?>
-
     <?php if ( is_search() ): ?>
 	<div class="entry-content">
 		<?php the_excerpt(); ?>

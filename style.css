@@ -4,7 +4,7 @@ Theme URI: http:pewae.com
 Author: 大致
 Author URI: http:pewae.com
 Description: Skywrap基于wordpress官方主题修改。本主题追求简单快捷舒适，适用于中文用户。
-Version: 0.05
+Version: 0.06
 GitHub Theme URI: lifishake/skywarp
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -1615,6 +1615,17 @@ blockquote:after,
     margin-left: 7.6923%;
 }
 
+.entry-header {
+        background-color:#000;
+        background-image: radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 40px),
+        radial-gradient(white, rgba(255,255,255,.15) 1px, transparent 30px),
+        radial-gradient(white, rgba(255,255,255,.1) 2px, transparent 40px),
+        radial-gradient(rgba(255,255,255,.4), rgba(255,255,255,.1) 2px, transparent 30px);
+        background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px; 
+        background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
+        padding-left: 1em;
+    }
+
 .entry-title {
     font-size: 28px;
     font-size: 1.75rem;
@@ -1630,21 +1641,6 @@ blockquote:after,
 .entry-title a:hover,
 .entry-title a:focus {
     color: #007acc;
-}
-
-.post-thumbnail {
-    display: block;
-    margin: 0 7.6923% 1.75em;
-}
-
-.post-thumbnail img {
-    display: block;
-    margin: 0 auto;
-}
-
-a.post-thumbnail:hover,
-a.post-thumbnail:focus {
-    opacity: 0.85;
 }
 
 .entry-content {
@@ -2614,7 +2610,6 @@ p > video {
     }
 
     .entry-header,
-    .post-thumbnail,
     .entry-content,
     .entry-footer,
     .comments-area,
@@ -2875,7 +2870,6 @@ p > video {
     }
 
     .entry-header,
-    .post-thumbnail,
     .entry-content,
     .entry-footer,
     .comments-area,
@@ -3197,10 +3191,6 @@ p > video {
         font-size: 1.4375em;
         line-height: 1.304347826;
         margin-bottom: 1.826086957em;
-    }
-
-    .post-thumbnail {
-        margin-bottom: 2.625em;
     }
 
     .entry-content h1,
@@ -3538,13 +3528,11 @@ p > video {
     .page-header,
     .page-content,
     .entry-content,
-    .post-thumbnail,
     .comments-area {
         margin-right: 0;
         margin-left: 0;
     }
 
-    .post-thumbnail,
     .site-main > article {
         margin-bottom: 3.5em;
     }

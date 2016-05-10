@@ -110,39 +110,6 @@ function twentysixteen_entry_taxonomies() {
 }
 endif;
 
-if ( ! function_exists( 'twentysixteen_post_thumbnail' ) ) :
-/**
- * Displays an optional post thumbnail.
- *
- * Wraps the post thumbnail in an anchor element on index views, or a div
- * element when on single views.
- *
- * Create your own twentysixteen_post_thumbnail() function to override in a child theme.
- *
- * @since Twenty Sixteen 1.0
- */
-function twentysixteen_post_thumbnail() {
-	if ( post_password_required() || is_attachment() || ! has_post_thumbnail() ) {
-		return;
-	}
-
-	if ( is_singular() ) :
-	?>
-
-	<div class="post-thumbnail">
-		<?php the_post_thumbnail(); ?>
-	</div><!-- .post-thumbnail -->
-
-	<?php else : ?>
-
-	<a class="post-thumbnail" href="<?php the_permalink(); ?>" aria-hidden="true">
-		<?php the_post_thumbnail( 'post-thumbnail', array( 'alt' => the_title_attribute( 'echo=0' ) ) ); ?>
-	</a>
-
-	<?php endif; // End is_singular()
-}
-endif;
-
 /**
  * Determines whether blog/site has more than one category.
  *
@@ -203,5 +170,21 @@ function twentysixteen_the_custom_logo() {
 	if ( function_exists( 'the_custom_logo' ) ) {
 		the_custom_logo();
 	}
+}
+endif;
+
+if ( ! function_exists( 'skywarp_get_thumbnail_str' ) ) :
+function skywarp_get_thumbnail_str() {
+    if ( !is_singular() )
+        return '';
+    if ( has_post_thumbnail() ) :
+        $post_image_id = get_post_thumbnail_id($post_to_use->ID);
+        if ($post_image_id) 
+        {
+            $thumbnail = wp_get_attachment_image_src( $post_image_id, 'post-thumbnail', false);
+            if ($thumbnail) (string)$thumbnail = $thumbnail[0];
+		}
+	endif;
+    return $thumbnail;
 }
 endif;

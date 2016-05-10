@@ -9,11 +9,10 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
+    <?php $thumbnail_src = skywarp_get_thumbnail_str(); ?>
+	<header class="entry-header" <?php if ($thumbnail_src) { echo 'style= " background-size:100% auto; background-position: 0% 0%; background-repeat:no-repeat; background-image:linear-gradient( to right,rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.85)), url('.$thumbnail_src.'"' ;} ?>>
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 	</header><!-- .entry-header -->
-
-	<?php twentysixteen_post_thumbnail(); ?>
 
 	<div class="entry-content">
 		<?php

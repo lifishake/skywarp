@@ -39,6 +39,9 @@
 ----------
 
 # IV. 版本历史 #
+## 2016/5/10 0.06 ##
+- 删除content中的thumbnail
+- 修改单篇的thumbnail为标题背景
 
 ## 2016/5/6 0.05 ##
 - 删除biography.php及css中相关内容
