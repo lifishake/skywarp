@@ -196,11 +196,8 @@
             if ( $comm )
                 $comm.css('display', '');*/
         }
-		//$('.sidebar-toggle').toggleClass('sidebar-toggled');
 		$('.sidebar-toggle').find('i').toggleClass('fa-arrow-left fa-arrow-right');
-	});
-	$('.sidebar-toggle-inside').click(function() {
-		$('.sidebar').toggleClass('sidebar-visible');
+        $('.sidebar-toggle').toggleClass('sidebar-opened');
 	});
     
 	$( document ).ready( function() {

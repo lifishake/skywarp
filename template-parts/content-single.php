@@ -10,7 +10,7 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
     <?php $thumbnail_src = skywarp_get_thumbnail_str(); ?>
-	<header class="entry-header" <?php if ($thumbnail_src) { echo 'style= " background-size:100% auto; background-position: 0% 0%; background-repeat:no-repeat; background-image:linear-gradient( to right,rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.85)), url('.$thumbnail_src.'"' ;} ?>>
+	<header class="entry-header" <?php if ($thumbnail_src) { echo 'style= " background-size:100% auto; background-position: 0% 0%; background-repeat:no-repeat; background-image:radial-gradient( ellipse at center, rgba(0,0,0,0.45) ,rgba(0,0,0,0.9) ), url('.$thumbnail_src.'"' ;} ?>>
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 	</header><!-- .entry-header -->
 

@@ -4,7 +4,7 @@ Theme URI: http:pewae.com
 Author: 大致
 Author URI: http:pewae.com
 Description: Skywrap基于wordpress官方主题修改。本主题追求简单快捷舒适，适用于中文用户。
-Version: 0.07
+Version: 0.08
 GitHub Theme URI: lifishake/skywarp
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -1641,6 +1641,7 @@ blockquote:after,
         radial-gradient(white, rgba(255,255,255,.15) 1px, transparent 30px),
         radial-gradient(white, rgba(255,255,255,.1) 2px, transparent 40px),
         radial-gradient(rgba(255,255,255,.4), rgba(255,255,255,.1) 2px, transparent 30px);
+        /*background-image: radial-gradient(center center, ellipse cover, #ffeda3, #ffc800);*/
         background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px; 
         background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
         padding-left: 1em;
@@ -2145,13 +2146,13 @@ body.search-no-results .page-header {
 .sidebar {
     margin-bottom: 3.5em;
     position: fixed;
-    width: 25em;
+    width: 400px;
     height: 100%;
-    padding: 0 7.6923%;
+    padding: 0 1.25%;
     top: 0;
-    right: -22em;
-    -webkit-transition: all 0.8s;
-    transition: all 0.8s;
+    right: -386px;
+    -webkit-transition: all 0.8s ease-in-out;
+    transition: all 0.8s ease-in-out;
     overflow-y: auto;
     z-index: 99;
     background-color:rgba(0,0,0,0.9);
@@ -2160,42 +2161,39 @@ body.search-no-results .page-header {
 .sidebar-visible {
     right: 0;
 }
-
 .sidebar-toggle{ 
     position:fixed;
     cursor:pointer;
     z-index: 101;
-    background-color:rgba(0,0,0,0);
+    background-color:rgba(0,0,0,0.9);
     font-size:1.33em !important;
     height: 28px;
     line-height: 28px;
     text-align: center;
     width: 28px;
     border: 2px solid ;
-    border-radius: 50%;
-    border-left-color:#5525A8 rgba(0,0,0,0) rgba(0,0,0,0) #5525A8;
     -webkit-transform:rotate(-45deg);
     -moz-transform:rotate(-45deg);
     transform:rotate(-45deg);
-    }
-
-.sidebar-toggle
-
-.sidebar-toggle:hover{
-    -webkit-transition:all .8s ease-in-out;
-    -moz-transition:all .8s ease-in-out;
-    -o-transition:all .8s ease-in-out;
-    transition:all .8s ease-in-out;
-    -webkit-transform:scale(1.2);
-    -moz-transform:scale(1.2);
-    transform:scale(1.2);
-    }
-
-.sidebar-toggle {
-    right:1.5em;
+    /*border-radius: 50%;*/
+    -webkit-transition: right 0.8s ease-in-out;
+    transition: right 0.8s ease-in-out;
+    overflow-y: auto;
     top:20%;
-    -webkit-transition: all 0.8s;
-    transition: all 0.8s;
+    border-color:#5525A8 rgba(0,0,0,0) rgba(0,0,0,0) #5525A8;
+    right:2px;
+    }
+
+.sidebar-toggle i {
+    -webkit-transform:rotate(45deg);
+    -moz-transform:rotate(45deg);
+    transform:rotate(45deg);
+}
+
+.sidebar-opened {
+    border-color:rgba(0,0,0,0) #5525A8 #5525A8  rgba(0,0,0,0) ;
+    right:388px;
+    /*transition:all .8s ease-in-out;*/
 }
 
 /**
@@ -3355,6 +3353,11 @@ p > video {
 @media screen and (max-width: 28.75em) {
     .sidebar-visible {
         width: 100%;
+    }
+    .sidebar-opened {
+        right:99.5%;
+        right:-webkit-calc(100% - 18px);
+        right:calc(100% - 18px);
     }
 }
 /**
