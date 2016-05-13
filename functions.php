@@ -78,8 +78,8 @@ function twentysixteen_setup() {
 
 	// This theme uses wp_nav_menu() in two locations.
 	register_nav_menus( array(
-		'primary' => __( 'Primary Menu', 'twentysixteen' ),
-		'social'  => __( 'Social Links Menu', 'twentysixteen' ),
+		'primary' => 'Primary Menu',
+		'social'  => 'Social Links Menu',
 	) );
 
 	/*
@@ -90,10 +90,12 @@ function twentysixteen_setup() {
 		'search-form',
 		'comment-form',
 		'comment-list',
-		'gallery',
 		'caption',
 	) );
 
+    /* 背景色也不支持定义哦 */
+    //add_theme_support('custom-background', array('wp-head-callback' => NULL ,) );
+    
 	/*
 	 * Enable support for Post Formats.
 	 *
@@ -107,8 +109,6 @@ function twentysixteen_setup() {
 		'link',
 		'gallery',
 		'status',
-		'audio',
-		'chat',
 	) );
 
 	/*
@@ -201,6 +201,7 @@ function twentysixteen_scripts() {
 
 	// Theme stylesheet.
 	wp_enqueue_style( 'twentysixteen-style', get_stylesheet_uri() );
+    wp_enqueue_style( 'twentysixteen-style-colors', get_template_directory_uri().'/customize/color.css' );
 
 	// Load the Internet Explorer specific stylesheet.
 	wp_enqueue_style( 'twentysixteen-ie', get_template_directory_uri() . '/css/ie.css', array( 'twentysixteen-style' ), '20160412' );

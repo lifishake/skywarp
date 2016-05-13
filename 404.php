@@ -3,8 +3,8 @@
  * 用来表示404页
  *
  * @package WordPress
- * @subpackage SkyWarp
- * @since SkyWarp 1.0
+ * @subpackage skywarp
+ * @since skywarp 1.0
  */
 
 get_header(); ?>
