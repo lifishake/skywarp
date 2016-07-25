@@ -157,7 +157,7 @@ body {
 		.comment-author,
 		.comment-reply-title small a:hover,
 		.comment-reply-title small a:focus {
-			color: #EEE
+			color: #D8D8D8
 		}
 
 		blockquote,
@@ -171,7 +171,7 @@ body {
 		.page-header,
 		.comments-title,
 		.comment-reply-title {
-			border-color: #EEE;
+			border-color: #D8D8D8;
 		}
 
 		button,
@@ -193,7 +193,7 @@ body {
 		.pagination:after,
 		.pagination .prev,
 		.pagination .next{
-			background-color: #EEE;
+			background-color: #D8D8D8;
 		}
 
 		/* Border Color */
@@ -225,25 +225,25 @@ body {
 		.comment-reply-link,
 		.no-comments,
 		.widecolumn .mu_register .mu_alert {
-			border-color: #EEE; /* Fallback for IE7 and IE8 */
-			border-color: rgba(238,238,238,0.2);
+			border-color: #D8D8D8; /* Fallback for IE7 and IE8 */
+			border-color: rgba(216,216,216,0.2);
 		}
 
 		hr,
 		code {
 			background-color: #EEE; /* Fallback for IE7 and IE8 */
-			background-color: rgba(238,238,238,0.2);
+			background-color: rgba(216,216,216,0.2);
 		}
 
 		@media screen and (min-width: 56.875em) {
 			.main-navigation ul ul,
 			.main-navigation ul ul li {
-				border-color: rgba(238,238,238,0.2);
+				border-color: rgba(216,216,216,0.2);
 			}
 
 			.main-navigation ul ul:before {
-				border-top-color: rgba(238,238,238,0.2);
-				border-bottom-color: rgba(238,238,238,0.2);
+				border-top-color: rgba(216,216,216,0.2);
+				border-bottom-color: rgba(216,216,216,0.2);
 			}
 		}
         /* Custom Secondary Text Color */
@@ -285,10 +285,10 @@ body {
 		.gallery-caption,
 		.widecolumn label,
 		.widecolumn .mu_register label {
-			color: #E5A65E;
+			color: #666;
 		}
 
 		.widget_calendar tbody a:hover,
 		.widget_calendar tbody a:focus {
-			background-color: #E5A65E;
+			background-color: #666;
 		}

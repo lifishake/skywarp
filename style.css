@@ -1791,6 +1791,7 @@ body:not(.search-results) .entry-header {
     font-size: 0.8125rem;
     line-height: 1.6153846154;
     margin-top: 2.1538461538em;
+    text-transform: uppercase;
 }
 
 .entry-footer:empty {
@@ -3114,7 +3115,7 @@ p > video {
 
     .entry-header,
     .entry-content,
-    .entry-footer,
+    /*.entry-footer,*/
     .comments-area,
     .image-navigation,
     .post-navigation,
@@ -3261,18 +3262,18 @@ p > video {
         margin-top: -1.105263158em;
     }
 
-    body:not(.search-results) article:not(.type-page) .entry-content {
+    /*body:not(.search-results) article:not(.type-page) .entry-content {
         float: left;
         margin-right: -100%;
         margin-left: 34.99999999%;
         width: 50.00000001%;
-    }
+    }*/
 
-    body:not(.search-results) article:not(.type-page) .entry-content > blockquote.alignleft.below-entry-meta {
+    /*body:not(.search-results) article:not(.type-page) .entry-content > blockquote.alignleft.below-entry-meta {
         margin-left: -40%;
         width: -webkit-calc(60% - 1.4736842105em);
         width: calc(60% - 1.4736842105em);
-    }
+    }*/
 
     body:not(.search-results) article:not(.type-page) img.below-entry-meta,
     body:not(.search-results) article:not(.type-page) figure.below-entry-meta {
@@ -3294,12 +3295,12 @@ p > video {
     body:not(.search-results) article:not(.type-page) .entry-footer {
         margin-right: -100%;
         margin-left: 15%;
-        width: 15%;
+        /*width: 15%;*/
     }
 
-    body:not(.search-results) article:not(.type-page) .entry-footer > span:not(:last-child):after {
+    /*body:not(.search-results) article:not(.type-page) .entry-footer > span:not(:last-child):after {
         display: none;
-    }
+    }*/
 
     .single .byline,
     .full-size-link,
@@ -3309,7 +3310,7 @@ p > video {
     body:not(.search-results) article:not(.sticky) .posted-on,
     body:not(.search-results) article:not(.type-page) .comments-link,
     body:not(.search-results) article:not(.type-page) .entry-footer .edit-link {
-        display: block;
+        /*display: block;*/
         margin-bottom: 0.5384615385em;
     }
 
